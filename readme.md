@@ -4,9 +4,15 @@ Option monad for upcoming go 1.18
 Experimental
 `
 
-`Can be used now (go 1.17.3) with gotip
-https://pkg.go.dev/golang.org/dl/gotip
 `
+Can be used now (go 1.17.3) with [gotip](https://pkg.go.dev/golang.org/dl/gotip)
+`
+
+install
+```sh 
+gotip get github.com/jh9aea/go-option
+```
+
 
 ```go 
 s := option.Some(1)
