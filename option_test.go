@@ -7,15 +7,15 @@ import (
 
 func TestSome(t *testing.T) {
 	s := Some(1)
-	if s.isSome() != true {
-		t.Fatal("Some(1).isSome() should be true")
+	if s.IsSome() != true {
+		t.Fatal("Some(1).IsSome() should be true")
 	}
 }
 
 func TestNone(t *testing.T) {
 	s := None[int]()
-	if s.isSome() != false {
-		t.Fatal("None().isSome() should be false")
+	if s.IsSome() != false {
+		t.Fatal("None().IsSome() should be false")
 	}
 }
 
@@ -69,7 +69,7 @@ func TestMapNone(t *testing.T) {
 	n := None[int]()
 	n = Map(func(v int) int { return v + 1 }, n)
 	m := Map(func(v int) string { return strconv.Itoa(v) }, n)
-	if n.isSome() || m.isSome() {
+	if n.IsSome() || m.IsSome() {
 		t.Fatal("Should be None")
 	}
 }
